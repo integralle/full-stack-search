@@ -90,6 +90,7 @@ When clicking on one of the `Hotels`, `Cities` or `Countries` links, the applica
 - Added very simple logging, so it's easier to debug if something goes wrong
 - Added react-query library because it provides a very easy way to handle different states of query (loading, error, fetched), On the front-end I treat 404 responses as errors for simplicity
 - Added react-router library, it makes defining routes very easy
+- Updated the search component to use only one state `searchToken`, because we can control all the behaviour using just this one state
 - I didn't add any tests as it would require more time, but if this repo went into production, it would require proper tests 
 
 ### Database structure
