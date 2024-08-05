@@ -22,6 +22,7 @@ try {
   await db.collection("cities").insertMany(cities);
   await db.collection("countries").insertMany(countries);
   await db.collection("hotels").insertMany(hotels);
+  console.log('Database successfully seeded');
 } catch (error) {
   console.error("Error seeding database:", error);
 } finally {

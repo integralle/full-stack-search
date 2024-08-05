@@ -84,7 +84,13 @@ When clicking on one of the `Hotels`, `Cities` or `Countries` links, the applica
 
 <!-- Write-up/conclusion section -->
 
-_When all the behaviour is implemented, feel free to add some observations or conclusions you like to share in the section_
+- Implemented the search on the backend using regex queries. It's much more performant than it was (fetching everything and filtering on the front end), but for large collections, it can be quite slow. An ideal solution would be to use MongoDB, which runs on Atlas and has support for full-text search
+- I extracted the database connection setup into a separate file so the connection pool can be reused in different files. Previously, a new connection was created for each query.
+- Repo is split into feature folders (cities, hotels, search ...), this should help to understand what this service does, by looking at it's architecture - https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html
+- Added very simple logging, so it's easier to debug if something goes wrong
+- Added react-query library because it provides a very easy way to handle different states of query (loading, error, fetched), On the front-end I treat 404 responses as errors for simplicity
+- Added react-router library, it makes defining routes very easy
+- I didn't add any tests as it would require more time, but if this repo went into production, it would require proper tests 
 
 ### Database structure
 
